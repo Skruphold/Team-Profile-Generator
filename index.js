@@ -18,7 +18,7 @@ const addManager = () => {
                 if (nameEntered) {
                     return true;
                 } else {
-                    console.log('Please enter the name of the manager.');
+                    console.log('\nPlease enter the name of the manager.');
                     return false;
                 }
             }
@@ -29,7 +29,7 @@ const addManager = () => {
             name: 'id',
             validate: idNum => {
                 if (isNaN(idNum)) {
-                    console.log("please enter the manager's id.");
+                    console.log("\nplease enter the manager's id.");
                     return false;
                 } else {
                     return true;
@@ -45,7 +45,7 @@ const addManager = () => {
                 if (valid) {
                     return true;
                 } else {
-                    console.log("Please enter the manager's email.");
+                    console.log("\nPlease enter the manager's email.");
                     return false;
                 }
             }
@@ -56,7 +56,7 @@ const addManager = () => {
             name: 'officeNumber',
             validate: officeNum => {
                 if (isNaN(officeNum)) {
-                    console.log("please enter the manager's office number.");
+                    console.log("\nplease enter the manager's office number.");
                     return false;
                 } else {
                     return true;
@@ -89,7 +89,7 @@ const addEmployee = () => {
                 if (nameEntered) {
                     return true;
                 } else {
-                    console.log('Please enter the name of the employee.');
+                    console.log('\nPlease enter the name of the employee.');
                     return false;
                 }
             }
@@ -100,7 +100,7 @@ const addEmployee = () => {
             name: 'id',
             validate: idNum => {
                 if (isNaN(idNum)) {
-                    console.log('Please enter the ID for the employee.');
+                    console.log('\nPlease enter the ID for the employee.');
                     return false;
                 } else {
                     return true;
@@ -116,7 +116,7 @@ const addEmployee = () => {
                 if (valid) {
                     return true;
                 } else {
-                    console.log("Please enter the employee's email.");
+                    console.log("\nPlease enter the employee's email.");
                     return false;
                 }
             }
@@ -130,7 +130,7 @@ const addEmployee = () => {
                 if (nameEntered) {
                     return true;
                 } else {
-                    console.log('Please enter the github username for the engineer.');
+                    console.log('\nPlease enter the github username for the engineer.');
                     return false;
                 }
             }
@@ -144,7 +144,7 @@ const addEmployee = () => {
                 if (nameEntered) {
                     return true;
                 } else {
-                    console.log('Please enter the school that the intern came from.');
+                    console.log('\nPlease enter the school that the intern came from.');
                     return false;
                 }
             }
@@ -179,7 +179,7 @@ const addEmployee = () => {
 }
 
 const writeFile = data => {
-    fs.writeFile('./dist/index.html', data, error => {
+    fs.writeFile('./dist/index1.html', data, error => {
         if (error) {
             console.log(error);
             return

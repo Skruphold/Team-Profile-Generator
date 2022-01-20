@@ -20,7 +20,48 @@ const addManager = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'input',
+            message: "What is your manager's ID",
+            name: 'id',
+            validate: idNum => {
+                if (isNaN(idNum)) {
+                    console.log("please enter the manager's id");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is the manager's email?",
+            name: 'email',
+            validate: eMail => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(eMail)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's email");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is your manager's office number?",
+            name: 'officeNumber',
+            validate: officeNum => {
+                if (isNaN(officeNum)) {
+                    console.log("please enter the manager's office number");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
         }
+
     ])
 } 
 

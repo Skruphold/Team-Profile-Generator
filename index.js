@@ -156,7 +156,7 @@ const addEmployee = () => {
         }
     ])
     .then(employeeData => {
-        let { name, id, email, position, github, school, confirmNewEmployee } = employeeData;
+        const { name, id, email, position, github, school, confirmNewEmployee } = employeeData;
         let employee;
 
         if (position === "Engineer") {
@@ -178,6 +178,25 @@ const addEmployee = () => {
     
 }
 
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, error => {
+        if (error) {
+            console.log(error);
+            return
+        } else {
+            console.log("Succesful you have created your team profile.");
+        }
+    })
+}
 
 addManager()
-    .then(addEmployee);
+    .then(addEmployee)
+    .then(employeeArray => {
+        return pageTemplate(employeeArray);
+    })
+    .then(newHtml => {
+        return writeFile(newHtml);
+    })
+    .catch(error => {
+        console.log(error);
+    })

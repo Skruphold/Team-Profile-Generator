@@ -179,7 +179,7 @@ const addEmployee = () => {
 }
 
 const writeFile = data => {
-    fs.writeFile('./dist/index1.html', data, error => {
+    fs.writeFile('./dist/index.html', data, error => {
         if (error) {
             console.log(error);
             return
